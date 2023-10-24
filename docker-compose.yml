@@ -1,0 +1,12 @@
+version: '3'
+services:
+  trash-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - LANG=en_US.UTF-8
+    ports:
+      - "1234:5000"
+    volumes:
+      - ./path/to/your/calendar.ics:/app/calendar.ics
